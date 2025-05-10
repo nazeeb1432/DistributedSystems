@@ -1,6 +1,6 @@
 import Loan from '../models/loan.js';
-  import Book from '../models/book.js';
-  import User from '../models/user.js';
+import Book from '../models/book.js';
+import User from '../models/user.js';
 
   export const getPopularBooks = async (req, res) => {
     try {

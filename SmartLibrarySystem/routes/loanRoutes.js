@@ -5,8 +5,8 @@ const router = express.Router();
 
 router.post('/', issueBook);
 router.post('/returns', returnBook);
-router.get('/:user_id', getUserLoans);
 router.get('/overdue', getOverdueLoans);
+router.get('/user/:user_id', getUserLoans);
 router.put('/:id/extend', extendLoan);
 
 export default router;

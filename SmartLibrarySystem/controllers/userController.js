@@ -42,3 +42,13 @@ import User from '../models/user.js';
       res.status(400).json({ error: error.message });
     }
   };
+
+    // Service method (non-API, internal use)
+  export const getUserById = async (id) => {
+    try {
+      const user = await User.findById(id);
+      return user;
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  };
