@@ -1,0 +1,88 @@
+
+
+services:
+  # MongoDB service
+  mongodb:
+    image: mongo:7
+    container_name: mongodb
+    ports:
+      - "27018:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=loan_service
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - library-network
+    restart: unless-stopped
+
+  # User Service
+  user-service:
+    build: ./user-service
+    container_name: user-service
+    ports:
+      - "3001:3001"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/user_service
+      - PORT=3001
+    networks:
+      - library-network
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+
+  # Book Service
+  book-service:
+    build: ./book-service
+    container_name: book-service
+    ports:
+      - "3002:3002"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/book_service
+      - PORT=3002
+    networks:
+      - library-network
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+
+  # Loan Service
+  loan-service:
+    build: ./loan-service
+    container_name: loan-service
+    ports:
+      - "3003:3003"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/loan_service
+      - PORT=3003
+      - USER_SERVICE_URL=http://user-service:3001
+      - BOOK_SERVICE_URL=http://book-service:3002
+    networks:
+      - library-network
+    depends_on:
+      - mongodb
+      - user-service
+      - book-service
+    restart: unless-stopped
+
+  # Nginx Gateway
+  nginx-gateway:
+    build: ./nginx-config
+    container_name: nginx-gateway
+    ports:
+      - "3000:3000"
+    networks:
+      - library-network
+    depends_on:
+      - user-service
+      - book-service
+      - loan-service
+    restart: unless-stopped
+
+# Define networks
+networks:
+  library-network:
+    driver: bridge
+
+# Define volumes for data persistence
+volumes:
+  mongodb_data:

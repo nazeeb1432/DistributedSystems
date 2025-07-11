@@ -1,0 +1,119 @@
+[{
+  "_id": {
+    "$oid": "6828bd1c794822cf493e7148"
+  },
+  "title": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
+  "author": "Eric Evans",
+  "isbn": "9780321125217",
+  "copies": 3,
+  "available_copies": 2,
+  "created_at": {
+    "$date": "2025-05-17T16:45:16.540Z"
+  },
+  "updated_at": {
+    "$date": "2025-05-17T16:57:22.023Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828bd91794822cf493e714a"
+  },
+  "title": "Clean Code",
+  "author": "Robert C Martin",
+  "isbn": "9780132350884",
+  "copies": 5,
+  "available_copies": 5,
+  "created_at": {
+    "$date": "2025-05-17T16:47:13.413Z"
+  },
+  "updated_at": {
+    "$date": "2025-05-17T17:11:42.308Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828bdda794822cf493e714d"
+  },
+  "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+  "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+  "isbn": "9780201633610",
+  "copies": 6,
+  "available_copies": 5,
+  "created_at": {
+    "$date": "2025-05-17T16:48:26.215Z"
+  },
+  "updated_at": {
+    "$date": "2025-05-17T16:57:56.742Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828be03794822cf493e714f"
+  },
+  "title": "The Pragmatic Programmer",
+  "author": "Andrew Hunt, David Thomas",
+  "isbn": "9780201616224",
+  "copies": 4,
+  "available_copies": 2,
+  "created_at": {
+    "$date": "2025-05-17T16:49:07.303Z"
+  },
+  "updated_at": {
+    "$date": "2025-05-18T04:33:45.891Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828be2b794822cf493e7151"
+  },
+  "title": "Refactoring: Improving the Design of Existing Code",
+  "author": "Martin Fowler",
+  "isbn": "9780201485677",
+  "copies": 3,
+  "available_copies": 3,
+  "created_at": {
+    "$date": "2025-05-17T16:49:47.371Z"
+  },
+  "updated_at": {
+    "$date": "2025-05-17T16:49:47.371Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828be57794822cf493e7153"
+  },
+  "title": "Code Complete: A Practical Handbook of Software Construction",
+  "author": "Steve McConnell",
+  "isbn": "9780735619678",
+  "copies": 7,
+  "available_copies": 3,
+  "created_at": {
+    "$date": "2025-05-17T16:50:31.773Z"
+  },
+  "updated_at": {
+    "$date": "2025-07-11T13:27:54.833Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828c70a794822cf493e716f"
+  },
+  "title": "Mindset",
+  "author": "Dr Carol",
+  "isbn": "9780321125220",
+  "copies": 5,
+  "available_copies": 4,
+  "created_at": {
+    "$date": "2025-05-17T17:27:38.946Z"
+  },
+  "updated_at": {
+    "$date": "2025-07-10T21:31:05.701Z"
+  },
+  "__v": 0
+}]
